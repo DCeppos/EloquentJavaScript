@@ -1,0 +1,20 @@
+//This example was written verbatim from Chapter 3, page 52 to illustrate recursion.
+//Comments are mine.
+
+function power(base, exponent){
+    
+    if (exponent == 0){
+        return 1;
+        
+    }
+    //as long as exponent is not zero, keep multiplying the base by the power function, reducing exponent until it is one
+    else {
+        return base * power(base, exponent-1);
+    }
+    
+    }
+ 
+ //All test cases result in the first argument to the power of the second argument.
+    console.log(power(2,3));
+    console.log(power(3,2));
+    console.log(power(3,3));
