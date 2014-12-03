@@ -1,0 +1,46 @@
+//This is the Bean Counting exercise described in Chapter 3, on page 60
+
+
+//this function counts the number of capital B's in a string
+function countBs(str) {
+    var numberBs = 0;
+    
+    for (var i =0; i < str.length; i++){
+        if (str[i]=== "B"){
+            numberBs += 1;
+            
+        }
+        
+    }
+    return numberBs;
+    }
+ 
+//test cases all work 
+countBs("String cheese");
+countBs("BBC");
+countBs("Bumble bee tuna");
+countBs("Baby Buster Brown Babbles");
+
+
+
+
+//this function counts a letter passed to it, in a string that is passed to it
+function countChar(str, char){
+   var countingChars = 0;
+   
+    for (var j =0; j < str.length; j++){
+        if (str[j]=== char){
+            countingChars += 1;
+            
+        }
+        
+    }
+    return countingChars;
+    }
+    
+
+//test cases all work 
+countChar("kakkerlak", "k"); 
+countChar("Sassy Silver's Sweetcakes", "s");
+countChar("Dashing David's dollars", "D");
+countChar("Robin Hood Men in Tights", "r");
