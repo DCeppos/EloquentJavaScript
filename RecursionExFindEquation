@@ -1,0 +1,36 @@
+//The below function is a verbatim example from Chapter 3, page 53 to show recursion in nested functions.
+//Comments are mine.
+
+
+
+function findEquation (target){
+   
+   //calls an internal function find which uses a start number and a string to describe the equation.
+   function find(start, history){
+      
+      //checks if the start number for find equals target, then outputs the equation to get there
+      if (start === target){
+         return history;
+      } 
+      
+      //null is result when equation is not possible
+      else if(start > target){
+          return null;   
+      }
+      
+      //either takes start and adds five or multiplies by three, then updates history string
+      else {
+          return find(start + 5, "(" + history + " + 5)") || find(start * 3, "(" + history + " * 3)");          
+      }
+      
+    }
+    
+ //starts the find function at 1    
+ return find(1, "1");
+    }
+
+
+//all test cases display equation from history variable. 
+console.log(findEquation(24));
+console.log(findEquation(39));
+console.log(findEquation(117));
